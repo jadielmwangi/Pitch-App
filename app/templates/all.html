@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+
+<!-- styles block -->
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+<!-- Content block -->
+{% block content %}
+
+<div class="container all">
+    <div class="row">
+        <a href="{{url_for('main.new_pitch')}}"><br>
+            <span class="new">Add a new Pitch</span></a>
+        </div>
+        
+    <div class="row">
+            <div class=" col-md-12 mx-auto bg-light all-pitches">
+                    <h3> Pitches </h3>
+                    {{macro.displayPitches(pitches)}}
+                 </div>
+    </div> 
+    </div>
+
+{% endblock%}
