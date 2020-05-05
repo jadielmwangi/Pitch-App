@@ -1,33 +1,33 @@
-# from flask import render_template,redirect,url_for, abort,request
-# from . import main
+from flask import render_template,redirect,url_for, abort,request
+from . import main
 
-# # from .forms import CommentsForm ,UpdateProfile, PitchForm, UpvoteForm, DownvoteForm
-# from ..models import User,Pitch, Comment,PitchCategory,Downvote,Upvote
-# from flask_login import login_required, current_user
-# from .. import db, photos
-# # import markdown2
+from .forms import CommentsForm ,UpdateProfile, PitchForm, UpvoteForm, DownvoteForm
+from ..models import User,Pitch, Comment,PitchCategory,Downvote,Upvote
+from flask_login import login_required, current_user
+from .. import db, photos
+import markdown2
 
    
 
-# # Views
-# @main.route('/')
-# def index():
-#     '''
-#     View root page function that returns the index page and its data
-#     '''
-#     title = 'Home - Welcome this is where you belong'
+# Views
+@main.route('/')
+def index():
+    '''
+    View root page function that returns the index page and its data
+    '''
+    title = 'Home - Welcome this is where you belong'
 
     
-#     pitches= Pitch.get_all_pitches()  
+    pitches= Pitch.get_all_pitches()  
 
-#     return render_template('index.html', title = title, pitches= pitches)
+    return render_template('index.html', title = title, pitches= pitches)
 
-# @main.route('/all')
-# def all():
-#     '''
-#     View root page function that returns the index page and its data
-#     '''
-#     title = 'Home - Welcome this is where you belong'
+@main.route('/all')
+def all():
+    '''
+    View root page function that returns the index page and its data
+    '''
+    title = 'Home - Welcome this is where you belong'
 
     
     pitches= Pitch.get_all_pitches() 

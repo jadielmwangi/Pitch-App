@@ -1,4 +1,4 @@
-# Pitch  Application
+n# Pitch  Application
 An application that will help users to post their pitches, view comments of their pitches and for other users to upvote or downvote for them. 
 
 
