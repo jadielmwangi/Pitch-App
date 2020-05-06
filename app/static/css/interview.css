@@ -2,28 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 .inter{
-    min-height: 100vh;
-    background-color:#5D737E;
+    
+    background-color:blue;
     font-family: 'Lato', sans-serif;
     font-size:20px;
     border-radius: 30px;
 }
 
 .text-light{
-    padding:20px;
-    font-size: 20px;
+    font-size:large;
+
 }
 .navbar{
-    background-color: black;
+    background-color:aliceblue;
     padding:20px;
     margin-top:5px;
+    font-family: 'Noto Sans JP', sans-serif;
 }
+
 
 .new{
     font-family: 'Lato', sans-serif;
-    color:black;
+    color:pink;
     font-size:25px;
     margin:50px;
     text-align: center;
     
+ }
+ p{
+     color: red;
+ }
+ *{
+     background-color: darkgray;
  }

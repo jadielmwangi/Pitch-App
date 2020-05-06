@@ -13,13 +13,13 @@
         
           <div class="card-header">
               <h1 class="text-center">Your Pitches</h1>    
-            <h1>  Hi; {{user.username| capitalize}} </h1>
+            <h1>  Hey' {{user.username| capitalize}} </h1>
           </div>
           <div class="card-title">
             {% if user.profile_pic_path %}
-            <img src="{{url_for('static',filename=user.profile_pic_path)}}"c class="rounded-circle card-image-top img-fluid" alt="" class="img-thumbnail">
+            <img src="{{url_for('static',filename=user.profile_pic_path)}}" class="rounded-circle card-image-top img-fluid" alt="" class="img-thumbnail">
             {%else%}
-            <p>You have no profile picture, Please upload one.</p>
+            <h3> kindly upload a profile picture since you don't have any at the moment:</h3>
             {% endif %}
 
             {% if user == current_user %}
@@ -40,7 +40,7 @@
             {% endif %}
             
             {% if user == current_user %}
-            <button><a class="bio" href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a></button>
+            <button><a class="bio" href="{{url_for('main.update_profile',uname=user.username)}}">Edit your profile here:</a></button>
             {% endif %}
 
           </div>

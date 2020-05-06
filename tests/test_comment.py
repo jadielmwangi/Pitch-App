@@ -7,18 +7,18 @@ class CommentTest(unittest.TestCase):
     Test Class to test the behaviour of the Pitch class
     '''
     def setUp(self):
-        self.user_Moringa = User(username = 'Moringa',password = 'password', email = 'moringa@gmail.com')
-        self.new_comment = Comment(pitch_id=12345,pitch_title='Review for movies',image_path="https://image.tmdb.org/t/p/w500/jdjdjdjn",movie_review='This movie is the best thing since sliced bread',user = self.user_Moringa) 
+        self.user_Moringa = User(username = 'Moringa',password = 'church', email = 'jedielmwangigmail.com')
+        self.new_comment = Comment(pitch_id=1111,pitch_title=' pitch review',image_path="",pitch_review='pitch review',user = self.user_Moringa) 
 
     def tearDown(self):
         Comment.query.delete()
         User.query.delete()
 
     def test_check_instance_variables(self):
-        self.assertEquals(self.new_comment.pitch_id,12345)
-        self.assertEquals(self.new_comment.pitch_title,'Review for movies')
-        self.assertEquals(self.new_comment.image_path,"https://image.tmdb.org/t/p/w500/jdjdjdjn")
-        self.assertEquals(self.new_comment.pitch_comment,'This movie is the best thing since sliced bread')
+        self.assertEquals(self.new_comment.pitch_id,1111)
+        self.assertEquals(self.new_comment.pitch_title,'pitch review')
+        self.assertEquals(self.new_comment.image_path,"")
+        self.assertEquals(self.new_comment.pitch_comment,'nice one')
         self.assertEquals(self.new_comment.user,self.user_Moringa) 
 
     def test_save_comment(self): 

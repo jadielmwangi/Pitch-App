@@ -8,15 +8,15 @@ class TestReview(unittest.TestCase):
     '''
     def setUp(self):
         
-        self.user_Moringa = User(username = 'Moringa',password = 'password', email = 'moringagmail@.com')
-        self.new_pitch = Pitch(pitch='An openning forum for youths',user = self.user_Moringa )
+        self.user_Moringa = User(username = 'Moringa',password = 'church', email = 'jadielmwangi@.gmail.com')
+        self.new_pitch = Pitch(pitch='Honesty is the best policy',user = self.user_Moringa )
 
     def tearDown(self):
         Pitch.query.delete()
         User.query.delete()
 
     def test_check_instance_variables(self):
-        self.assertEquals(self.new_pitch.pitch,'An opening forum for youths')
+        self.assertEquals(self.new_pitch.pitch,'Honesty is the best policy')
         self.assertEquals(self.new_pitch.user,self.user_Moringa)
 
     def test_save_review(self):
@@ -28,3 +28,6 @@ class TestReview(unittest.TestCase):
         self.new_pitch.save_pitch()
         got_pitches = Pitch.get_all_piches()
         self.assertTrue(len(got_pitches) == 1)
+
+
+

@@ -3,18 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 
 .prof{
-        min-height: 100vh;
-        background-color:#5D737E;
-        font-family: 'Courgette', cursive;
-        font-size:20px;
+    
+        background-color:darkgray;
+        font-size:large;
         border-radius: 30px;
 }
 
+
 .navbar{
-    background-color: black;
+    background-color:aliceblue;
     padding:20px;
     margin-top:5px;
+    font-family: 'Noto Sans JP', sans-serif;
 }
+
 .card-img-top {
 
     width: 100%;
@@ -27,7 +29,15 @@
 
 
 h1{
-    font-family: 'Alfa Slab One', cursive;
+   color: red;
+    font-weight: bold;
+    font-size:large;
+
+}
+
+
+button{
+    left:500px;
 }
 
 .text-light{
@@ -37,18 +47,16 @@ h1{
 }
 
 .sub{
-    margin-bottom:20px;
+    
     text-align: center;
     margin-right:80px;
 }
 
 
 p{
-    font-size:20px;
     text-align:center;
+    font-size:large;
+    color: red;
+
 }
 
-
-button{
-    left:500px;
-}

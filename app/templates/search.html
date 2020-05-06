@@ -2,17 +2,17 @@
 {% import 'macros.html' as macro%}
 
 {% block content %}
-    <div class="container">
+<div class="container">
 
-        <div class="row">
+    <div class="row">
 
-            <h3> Found {{ pitches| count }} matches </h3>
-            <hr>
-            <ul>
-                {{ macro.displayPitches(pitches)}}
-            </ul>
-
-        </div>
+        <p> Found {{ pitches| count }} matches correctly </p>
+        <hr>
+        <ul>
+            {{ macro.displayPitches(pitches)}}
+        </ul>
 
     </div>
+
+</div>
 {% endblock %}

@@ -10,23 +10,31 @@
 }
 
 .prom{
-    min-height: 100vh;
-    background-color:rgb(93, 96, 126);
+    
     font-family: 'Noto Sans JP', sans-serif;
-    font-size:20px;
 }
 
 .navbar{
-    background-color: black;
-    padding:20px;
+    background-color:aliceblue;
     margin-top:5px;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .new{
     font-family: 'Noto Sans JP', sans-serif; 
-    color:black;
-    font-size:25px;
-    margin:50px;
+    color:pink;
+    font-size: large;
+
     text-align: center;
     
  }
+
+ p{
+    text-align:center;
+    font-size:large;
+    color: red;
+
+}
+*{
+    background-color: darkgray;
+}

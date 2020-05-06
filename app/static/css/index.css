@@ -1,74 +1,71 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 h2,h3{
     text-align: center;
-    color: aliceblue;
-     font-family: 'Lato', sans-serif;
+    color: red;
+    font-family: 'Lato', sans-serif;
     font-size:large;
 }
 
+
+p{ text-align: center;
+    color: red;
+     font-family: 'Lato', sans-serif;
+    font-size:large; }
+    
  .all{
-    background-color:darkgray;
-    height:100vh;;
-    margin-bottom: 60px;
+    margin-bottom: auto;
     font-family: 'Noto Sans JP', sans-serif;
  }
 
- .new{
-    color:black;
-    font-size:25px;
-    margin:40px;
-    text-align: center;
- }
- .row{
-     margin:40px;
- }
 
  .navbar-brand{
      text-align: center;
  }
 
  .navbar{
-     background-color: black;
-     padding:20px;
-     margin-top:5px;
+     
+     margin-top:15px;
      font-family: 'Noto Sans JP', sans-serif;
  }
 
-
- .text-light{
-     padding:20px;
-     font-size: 20px;
+ #firstpage{
+    background-color: darkgray;
  }
-
+ 
+ 
  .sign{
-     margin-top:6px;
+     margin-top:10px;
  }
+#firstpage{
+    text-align: center;
+    font-size:large;
 
+
+}
+ 
  .login{
 
-    background-color:red;
+
     font-family: 'Noto Sans JP', sans-serif;
-    font-size:20px;
+    font-size:large;
  }
 
- .log{
-     margin-top: 5px;
- }
 
  .register{
     
-    background-color:aqua;
+    background-color:blue;
     font-family: 'Noto Sans JP', sans-serif;
-    font-size:20px;
+    font-size:large;
  }
 
  .comment{
 
-    background-color:red;
-    font-size:20px;
+    font-size:large;
  }
 
- 
+ *{
+     margin-left: auto;
+     margin-right: auto;
+ }

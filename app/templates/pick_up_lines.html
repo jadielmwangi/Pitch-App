@@ -9,19 +9,19 @@
 {% block content %}
 
 
-        <div class="container  pick">
-                <h3 class="text-center text-light">Pick Up Lines</h3>
-                <a class="new"  href="{{url_for('main.new_pitch')}}">
-                    <br>
-                    Add a new Pitch
-                </a>
-        
-    
-                
-                    {{macro.displayPitchesInCategories(pitches,2)}}
-                
-            
-            </div>
+<div class="container  pick">
+    <h3 class="text-center text">Pick Up Lines </h3>
+    <a class="new" href="{{url_for('main.new_pitch')}}">
+        <br>
+        Add a new Pitch here:
+    </a>
+
+
+
+    {{macro.displayPitchesInCategories(pitches,2)}}
+
+
+</div>
 
 
 {% endblock %}

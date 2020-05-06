@@ -1,9 +1,9 @@
-# Pitch  Application
-An application that will help users to post their pitches, view comments of their pitches and for other users to upvote or downvote for them. 
+# Name of Application
+ Pitch-App 
 
 
 ## Description
- Pitch  Application is an application that allows users to use one minute wisely.The users will submit their one minute pitches and other users will vote on them and give comments to give their feedback on them.
+ Pitch  Application is an application that allows users to use one minute as best as they can.The users shall submit their one minute pitches and other users will vote on them and give comments to give their feedback on them.
 
 
 ## Behaviour Driven Development
@@ -30,22 +30,16 @@ An application that will help users to post their pitches, view comments of thei
 
 
 
-
-
 ## Running the Application
 * Creating the virtual environment
 
-        $ python3.6 -m venv --without-pip virtual
-        $ source virtual/bin/env
+* python3.6 -m venv --without-pip virtual
+*source virtual/bin/env
         
 * Installing Flask and other Modules
-
-       Use  $ python3.6 -m pip install  to install all your modules
-       for example: python3.6 -m pip install flask
         
-        
-* To run the application, in your terminal:
-        $ chmod a+x start.sh
+* To run the application using:
+         chmod a+x start.sh
         ./start.sh
 
 
@@ -54,7 +48,7 @@ An application that will help users to post their pitches, view comments of thei
 * Flask
 * Database
 
-## License
+
 ## Copyright and licence information
 
 MIT License

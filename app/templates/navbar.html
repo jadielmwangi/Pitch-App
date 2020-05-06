@@ -1,36 +1,47 @@
 <nav class="navbar">
-    
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li>
-          <a class="text-light" href="/"><i class="fa fa-home "></i><strong>HOME</strong> </a>
-        </li>
-        <li>
-          <a class="text-light" href="{{url_for('main.all')}}"><strong>All pitches</strong></a>
-        </li>
-       
-          <li class="dropdown"><a href="#" class="dropdown-toggle text-light" data-toggle="dropdown"><strong class="ml-2">Select Category</strong> <b class="caret"></b></a>
-          <div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
-            <div><a class="dropdown-item" href="{{url_for('main.interview')}}"><strong>Interview Pitches</strong></a></div>
-            <div><a class="dropdown-item" href="{{url_for('main.pick_up_line')}}"><strong> pick Up Lines</strong> </a></div>
-            <div><a class="dropdown-item" href="{{url_for('main.promotion')}}"><strong>Promotion Pitches</strong></a></div>
-            <div><a class="dropdown-item"  href="{{url_for('main.product')}}"><strong>Product Pitches</strong></a></div>
-          </div>
-        </li>
-       
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        {% if current_user.is_authenticated %}
-        
-        <li class="dropdown"><a href="#" class="dropdown-toggle text-light" data-toggle="dropdown"><i class="fa fa-user"></i><strong class="ml-2">Welcome, {{current_user.username}}</strong> <b class="caret"></b></a>
-          <ul class="dropdown-menu bg-dark text-center">
-              
-              <li><a href="{{url_for('main.profile',uname=current_user.username)}} " class="text-light " ><i class="icon-envelope"></i><strong>Your profile</strong></a></li>
-              <li class="divider"></li>
-              <div class="dropdown-divider"></div>
-              <li><a href="{{url_for('auth.logout')}}" class="text-light "><i class="fa fa-sign-out mr-2"></i><strong>Logout</strong></a></li>
-          </ul>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li>
+        <a class="text-light" href="/"><i class="fa fa-home "></i><strong>Home page</strong> </a>
       </li>
-        {% else %}
-        <li><a href="{{url_for('auth.login')}}" class="text-light"><i class="fa fa-sign-in mr-2"></i><strong>Log In</strong></a></li>
-        {%endif%}
+      <li>
+        <a class="text-light" href="{{url_for('main.all')}}"><strong>All pitches</strong></a>
+      </li>
+
+      <li class="dropdown"><a href="#" class="dropdown-toggle text-light" data-toggle="dropdown"><strong
+            class="ml-2">Select Category</strong> <b class="caret"></b></a>
+        <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+          <div><a class="dropdown-item" href="{{url_for('main.promotion')}}"><strong>Promotion Pitches</strong></a>
+          </div>
+          <div><a class="dropdown-item" href="{{url_for('main.product')}}"><strong>Product Pitches</strong></a></div>
+          <div><a class="dropdown-item" href="{{url_for('main.interview')}}"><strong>Interview Pitches</strong></a>
+          </div>
+          <div><a class="dropdown-item" href="{{url_for('main.pick_up_line')}}"><strong> pick Up Lines</strong> </a>
+          </div>
+
+        </div>
+      </li>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      {% if current_user.is_authenticated %}
+
+      <li class="dropdown"><a href="#" class="dropdown-toggle text-light" data-toggle="dropdown"><i
+            class="fa fa-user"></i><strong class="ml-3">Welcome, {{current_user.username}}</strong> <b
+            class="caret"></b></a>
+        <!-- <ul class="dropdown-menu bg-dark text-center"> -->
+          <ul >
+
+          <li><a href="{{url_for('main.profile',uname=current_user.username)}} " class="text-light "><i
+                class="icon-envelope"></i><strong>Your profile</strong></a></li>
+          <li class="divider"></li>
+          <div class="dropdown-divider"></div>
+          <li><a href="{{url_for('auth.logout')}}" class="text-light "><i class="fa fa-sign-out mr-2"></i><strong>Log
+                out</strong></a></li>
+        </ul>
+      </li>
+      {% else %}
+      <li><a href="{{url_for('auth.login')}}" class="text-light"><i class="fa fa-sign-in mr-2"></i><strong>Log
+            In</strong></a></li>
+      {%endif%}

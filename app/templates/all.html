@@ -15,15 +15,24 @@
 <div class="container all">
     <div class="row">
         <a href="{{url_for('main.new_pitch')}}"><br>
-            <span class="new">Add a new Pitch</span></a>
-        </div>
-        
-    <div class="row">
-            <div class=" col-md-12 mx-auto bg-light all-pitches">
-                    <h3> Pitches </h3>
-                    {{macro.displayPitches(pitches)}}
-                 </div>
-    </div> 
+            <span class="new">Add a new Pitch here:</span></a>
     </div>
 
-{% endblock%}
+    <div class="row" id="pitch">
+        <div class=" col-md-12 mx-auto bg-primary all-pitches">
+
+
+            <div class=" col-md-12" id=last>
+                <!-- <div class="panel bg-light text-center style="style="box-shadow: 5px 5px 5px 5px #f2f2f2; padding:10px;"> -->
+
+                    
+                <h3> The following are the pitches avaiable:</h3>
+               
+                <!-- <h3 style="color:pink;">{{macro.displayPitches(pitches)}}:</h3> -->
+                {{macro.displayPitches(pitches)}}
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock%}
