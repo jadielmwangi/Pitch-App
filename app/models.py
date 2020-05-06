@@ -63,7 +63,7 @@ class Pitch(db.Model):
     @classmethod
     def get_all_pitches(cls):
         '''
-        Function that queries the databse and returns all the pitches
+        Function that queries the database and returns all the pitches
         '''
         return Pitch.query.all()
 
@@ -149,7 +149,7 @@ class Downvote(db.Model):
         return downvote
 
     def __repr__(self):
-        return f'{self.id_user}:{self.pitch_id}'
+          return f'{self.id_user}:{self.pitch_id}'
 
 class Upvote(db.Model):
     __tablename__ = 'upvotes'

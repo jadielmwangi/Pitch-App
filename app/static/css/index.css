@@ -1,35 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Carter+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 
-
- h3{
-     text-align: center;
-     font-family: 'Merienda One', cursive;
-     color:black;
- }
-
- #index{
-    background-color:#5D737E;
-    min-height: 80vh;
-    margin:80px;
-    border-radius: 28px;
- }
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+h2,h3{
+    text-align: center;
+    color: aliceblue;
+     font-family: 'Lato', sans-serif;
+    font-size:large;
+}
 
  .all{
-    background-color:#5D737E;
+    background-color:darkgray;
     height:100vh;;
     margin-bottom: 60px;
-    font-family: 'Courgette', cursive;
+    font-family: 'Noto Sans JP', sans-serif;
  }
 
  .new{
-    font-family: 'Courgette', cursive;
     color:black;
     font-size:25px;
     margin:40px;
     text-align: center;
-    box-shadow: black 1px 1px;
  }
  .row{
      margin:40px;
@@ -43,16 +34,10 @@
      background-color: black;
      padding:20px;
      margin-top:5px;
+     font-family: 'Noto Sans JP', sans-serif;
  }
 
- h2{
-     text-align: center;
-     margin-bottom:40px;
-     margin-top:150px;
-     font-family: 'Carter One', cursive;
-     font-size:30px;
-     color:black
- }
+
  .text-light{
      padding:20px;
      font-size: 20px;
@@ -63,9 +48,9 @@
  }
 
  .login{
-    min-height: 100vh;
-    background-color:#5D737E;
-    font-family: 'Courgette', cursive;
+
+    background-color:red;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size:20px;
  }
 
@@ -74,29 +59,16 @@
  }
 
  .register{
-    min-height: 100vh;
-    background-color:#5D737E;
-    font-family: 'Courgette', cursive;
+    
+    background-color:aqua;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size:20px;
  }
 
  .comment{
-    min-height: 100vh;
-    background-color:#5D737E;
-    font-family: 'Courgette', cursive;
+
+    background-color:red;
     font-size:20px;
  }
 
- .view-comment{
-    min-height: 100vh;
-    background-color:#5D737E;
-    font-family: 'Courgette', cursive;
-    font-size:20px;
- }
-
- .new-pitch{
-    min-height: 100vh;
-    background-color:#5D737E;
-    font-family: 'Courgette', cursive;
-    font-size:20px;
- }
+ 
