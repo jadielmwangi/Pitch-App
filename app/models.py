@@ -25,7 +25,7 @@ class User(UserMixin, db.Model):
     
     @property
     def password(self):
-        raise AttributeError('You cannot read the password attribute')
+        raise AttributeError('You cannot read the password attribute:')
 
     @password.setter
     def password(self, password):
@@ -83,6 +83,7 @@ class Comment(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     comment = db.Column(db.String)
     image_path = db.Column(db.String)
+    
     pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))
     posted = db.Column(db.DateTime,default=datetime.utcnow)
     username = db.Column(db.String)
@@ -164,6 +165,7 @@ class Upvote(db.Model):
     def save_votes(self):
         db.session.add(self)
         db.session.commit()
+
 
     @classmethod
     def add_upvotes(cls,id):
