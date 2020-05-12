@@ -13,7 +13,7 @@
         
           <div class="card-header">
               <h1 class="text-center">Your Pitches</h1>    
-            <h1>  Hey' {{user.username| capitalize}} </h1>
+            <h1>  Hey {{user.username| capitalize}} </h1>
           </div>
           <div class="card-title">
             {% if user.profile_pic_path %}
@@ -50,3 +50,5 @@
       
     </div>
   </div>
+
+  {% endblock %}

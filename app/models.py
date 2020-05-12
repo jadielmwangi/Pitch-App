@@ -2,6 +2,8 @@
 from datetime import datetime
 from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
+
+# from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin, current_user
 from . import login_manager
 
@@ -108,7 +110,7 @@ class Comment(db.Model):
 
 class PitchCategory(db.Model):
     '''
-    Function that defines different categories of pitches
+    Function that defines different categories of pitches:
     '''
     __tablename__ ='pitch_categories'
 
@@ -125,32 +127,6 @@ class PitchCategory(db.Model):
         categories = PitchCategory.query.all()
         return categories
 
-class Downvote(db.Model):
-    __tablename__ = 'downvotes'
-    '''
-    Function that stores user votes
-    '''
-    id = db.Column(db.Integer, primary_key=True)
-    downvote = db.Column(db.Integer,default=1)
-    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))
-    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
-
-    def save_votes(self):
-        db.session.add(self)
-        db.session.commit()
-
-    @classmethod
-    def add_downvotes(cls,id):
-        downvote_pitch = Downvote(user = current_user, pitch_id=id)
-        downvote_pitch.save_downvotes()
-
-    @classmethod
-    def get_votes(cls, id):
-        downvote = Downvote.query.filter_by(pitch_id=id).all()
-        return downvote
-
-    def __repr__(self):
-          return f'{self.id_user}:{self.pitch_id}'
 
 class Upvote(db.Model):
     __tablename__ = 'upvotes'
@@ -179,4 +155,62 @@ class Upvote(db.Model):
         return upvote
 
     def __repr__(self):
-        return f'{self.id_user}:{self.pitch_id}'    
+        return f'{self.id_user}:{self.pitch_id}' 
+
+
+
+class Downvote(db.Model):
+    __tablename__ = 'downvotes'
+    '''
+    Function that stores user votes
+    '''
+    id = db.Column(db.Integer, primary_key=True)
+    downvote = db.Column(db.Integer,default=1)
+    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+
+    def save_votes(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def add_downvotes(cls,id):
+        downvote_pitch = Downvote(user = current_user, pitch_id=id)
+        downvote_pitch.save_downvotes()
+
+    @classmethod
+    def get_votes(cls, id):
+        downvote = Downvote.query.filter_by(pitch_id=id).all()
+        return downvote
+
+    def __repr__(self):
+          return f'{self.id_user}:{self.pitch_id}'
+
+# class Upvote(db.Model):
+#     __tablename__ = 'upvotes'
+#     '''
+#     Function that stores user votes
+#     '''
+#     id = db.Column(db.Integer, primary_key=True)
+#     upvote = db.Column(db.Integer,default=1)
+#     pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))
+#     user_id =  db.Column(db.Integer,db.ForeignKey('users.id'))
+
+#     def save_votes(self):
+#         db.session.add(self)
+#         db.session.commit()
+
+
+#     @classmethod
+#     def add_upvotes(cls,id):
+#         upvote_pitch = Upvote(user = current_user, pitch_id=id)
+#         upvote_pitch.save_upvotes()
+
+
+#     @classmethod
+#     def get_votes(cls, id):
+#         upvote = Upvote.query.filter_by(pitch_id=id).all()
+#         return upvote
+
+#     def __repr__(self):
+#         return f'{self.id_user}:{self.pitch_id}'    

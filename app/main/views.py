@@ -1,13 +1,12 @@
 from flask import render_template,redirect,url_for, abort,request
 from . import main
 
-from .forms import CommentsForm ,UpdateProfile, PitchForm, UpvoteForm, DownvoteForm
+from .forms import CommentsForm ,UpdateProfile, PitchForm, DownvoteForm,UpvoteForm
 from ..models import User,Pitch, Comment,PitchCategory,Downvote,Upvote
 from flask_login import login_required, current_user
 from .. import db, photos
 import markdown2
 
-   
 
 # Views
 @main.route('/')
@@ -15,9 +14,8 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    title = 'Home - Welcome this is where you belong'
+    title = 'Home - Welcome to pitch app'
 
-    
     pitches= Pitch.get_all_pitches()  
 
     return render_template('index.html', title = title, pitches= pitches)
@@ -27,11 +25,10 @@ def all():
     '''
     View root page function that returns the index page and its data
     '''
-    title = 'Home - Welcome this is where you belong'
+    title = 'Home - Welcome to pitch app'
 
     
     pitches= Pitch.get_all_pitches() 
-    # upvotes = Upvote.get_all_upvotes(pitch_id=Pitch.id) 
 
     return render_template('all.html', title = title, pitches= pitches)
 
@@ -41,7 +38,7 @@ def interview():
     View root page function that returns the index page and its data
     '''
     pitches= Pitch.get_all_pitches()
-    title = 'Home - Welcome to The best Pitching Website Online'  
+    title = 'Home - Welcome to The best Pitching platform'  
     return render_template('interview.html', title = title, pitches= pitches )
 
 @main.route('/pick_up_lines/pitches/')
@@ -49,7 +46,7 @@ def pick_up_line():
     '''
     View root page function that returns the index page and its data
     '''
-    title = 'Pick Up Lines'
+    title = 'Pick up lines'
 
     pitches= Pitch.get_all_pitches()
 
@@ -180,7 +177,7 @@ def update_profile(uname):
 @main.route('/view/comment/<int:id>')
 def view_comments(id):
     '''
-    Function that returs  the comments belonging to a particular pitch
+    Function that returs  the comments of a particular pitch
     '''
     comments = Comment.get_comments(id)
     return render_template('view_comments.html',comments = comments, id=id)

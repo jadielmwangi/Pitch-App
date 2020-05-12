@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 .pick{
-    background-color:beige;
+    background-color:darkgray;
     font-family: 'Noto Sans JP', sans-serif;
     font-size:large;
     border-radius: 30px;
@@ -13,7 +13,7 @@
     font-size: large;
 }
 .navbar{
-    background-color:aliceblue;
+    background-color:darkgray;
     padding:20px;
     margin-top:5px;
     font-family: 'Noto Sans JP', sans-serif;
